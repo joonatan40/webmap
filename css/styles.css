@@ -1,27 +1,46 @@
-.map-container {height:500px;}
+.map-container {
+	height: 500px;
+}
 
-a {margin-top: 10px;
-padding-right:5px;
-color: black;
-text-decoration: underline;
-font-family:verdana;}
-a:hover {background-color: #3380FF;
-color: #F9F9F9;}
-h1 {text-align: center;
-color: #3380FF;
-margin-top: 25px;
-margin-bottom: 25px;
-font-family:verdana;}
-container {class:"block";
-margin-top: 5px;
-margin-bottom: 5px;
-padding-left: 5%;
-padding-right: 5%;}
-map {height: 700px;
-width: 100%;
-border: 1px solid;}
-footer {margin-top: 5px;
-padding: 1%;
-background-color: #3380FF;
-color: white;
-font-family:verdana;}
+a {
+	margin-top: 10px;
+	padding-right: 5px;
+	color: black;
+	text-decoration: underline;
+	font-family: verdana;
+}
+
+a:hover {
+	background-color: #3380FF;
+	color: #F9F9F9;
+}
+
+h1 {
+	text-align: center;
+	color: #3380FF;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	font-family: verdana;
+}
+
+container {
+	class: "block";
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+map {
+	height: 700px;
+	width: 100%;
+	border: 1px solid;
+}
+
+footer {
+	margin-top: 5px;
+	padding: 1%;
+	background-color: #3380FF;
+	color: white;
+	font-family: verdana;
+}
