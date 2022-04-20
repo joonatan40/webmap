@@ -6,6 +6,10 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 })
 osm.addTo(map)
 
+function popUPinfo(feature, layer) {
+ layer.bindPopup(feature.properties.NIMI)
+}
+
 async function addDistrictsGeoJson(url) {
  const response = await fetch(url)
  const data = await response.json()
