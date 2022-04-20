@@ -15,7 +15,42 @@ async function addDistrictsGeoJson(url) {
  const data = await response.json()
  const polygons = L.geoJson(data, {
  onEachFeature: popUPinfo,
+   style: polygonStyle,
  })
  polygons.addTo(map)
 }
 addDistrictsGeoJson('geojson/tartu_city_districts_edu.geojson')
+
+async function addCelltowersGeoJson(url) {
+ const response = await fetch(url)
+ const data = await response.json()
+ const markers = L.geoJson(data)
+ markers.addTo(map)
+}
+addCelltowersGeoJson('geojson/tartu_city_celltowers_edu.geojson')
+
+
+function getColor(property) {
+ switch (property) {
+ case 1:
+ return '#ff0000'
+ case 13:
+ return '#009933'
+ case 6:
+ return '#0000ff'
+ case 7:
+ return '#ff0066'
+ default:
+ return '#ffffff'
+ }
+ 
+ function polygonStyle(feature) {
+ return {
+ fillColor: getColor(feature.properties.OBJECTID),
+ fillOpacity: 0.5,
+ weight: 1,
+ opacity: 1,
+ color: 'grey',
+ }
+}
+}
